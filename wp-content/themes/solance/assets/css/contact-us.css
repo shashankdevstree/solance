@@ -1,0 +1,111 @@
+a {
+  text-decoration: none; /* Removes underline from the link */
+  color: inherit; /* Inherits the color from the parent element */
+}
+
+.section-wrapper {
+  margin-top: 70px;
+  margin-bottom: 50px;
+}
+
+.cust-link p {
+  margin: 0; /* Removes default margin from the paragraph */
+  font-size: 1em; /* Example font size */
+  color: #555; /* Example color */
+  text-align: center; /* Center-align the text */
+}
+.cust-link:hover p {
+  font-weight: bold; /* Makes text bold on hover */
+}
+
+.contact-us-bg {
+  background: url("/assets/images/contact-us-page/contact-us-bg.png") no-repeat
+    center center;
+  background-size: cover;
+  margin-top: 50px;
+  height: 450px;
+}
+@media (max-width: 1400px) {
+  .contact-us-bg {
+    height: 530px;
+  }
+  .cust-card p {
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 1200px) {
+  .contact-us-bg {
+    margin-top: 0px;
+  }
+  .contact-us-bg {
+    height: 480px;
+  }
+}
+@media (max-width: 991px) {
+  .contact-us-bg {
+    height: 390px;
+  }
+}
+@media (max-width: 768px) {
+  .contact-us-bg {
+    height: 340px;
+  }
+}
+@media (max-width: 500px) {
+  .contact-us-bg {
+    height: 250px;
+  }
+}
+.cust-card {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+  height: 100%;
+  text-align: center;
+  border: 1px solid #e9ecef;
+  border-radius: 0.25rem;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 4px 8px 0 rgba(173, 216, 230, 0.2),
+    0 6px 20px 0 rgba(173, 216, 230, 0.19);
+}
+
+.cust-card h5 {
+  font-size: 24px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600 !important;
+  line-height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.cust-card p {
+  /* padding: 10px 0px; */
+}
+
+.cust-card .cust-card-img {
+  margin-bottom: 23px;
+}
+
+@media (max-width: 1300px) {
+  .address-card {
+    margin: 20px 0px;
+  }
+
+  .section-wrapper {
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
+
+  .call-card {
+    margin: 20px 0px;
+  }
+
+  .email-card {
+    margin: 20px 0px;
+  }
+}
+
+@media (max-width: 768px) {
+}

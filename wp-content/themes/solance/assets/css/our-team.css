@@ -1,0 +1,105 @@
+h2 {
+  font-family: Montserrat, sans-serif;
+}
+
+p {
+  font-family: Montserrat, sans-serif;
+}
+
+.card-img {
+  width: 273px;
+  height: 317px;
+  transition: transform 0.5s ease-in-out !important;
+}
+.card-img:hover {
+  transform: scale(1.05);
+}
+
+.content-wrapper {
+  padding: 100px 255px;
+}
+
+.card-text-wrapper {
+  /* padding: 35px 16px 25px 16px; */
+  background-color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  /* margin-bottom: 10px; */
+  padding-left: 10px;
+}
+
+.flex-wrapper {
+  display: flex;
+}
+
+.our-team-bg {
+  background: url("/assets/images/our-team-page/our-team-bg.png") no-repeat
+    center center;
+  background-size: cover;
+  height: 598px;
+}
+
+.card-text {
+  box-shadow: 8px 10px 15px 0px rgba(173, 216, 230, 0.2);
+}
+.flex-wrapper {
+  display: flex;
+  gap: 10px;
+}
+@media (max-width: 1400px) {
+  .our-team-bg {
+    height: 530px;
+  }
+  .card-img {
+    width: 273px;
+    height: 280px;
+  }
+}
+@media (max-width: 1200px) {
+  .our-team-bg {
+    height: 480px;
+  }
+}
+@media (max-width: 991px) {
+  .our-team-bg {
+    height: 390px;
+  }
+}
+@media (max-width: 768px) {
+  .our-team-bg {
+    height: 340px;
+  }
+}
+@media (max-width: 500px) {
+  .our-team-bg {
+    height: 250px;
+  }
+}
+@media (max-width: 767px) {
+  .card-img {
+    width: 80% !important;
+    height: 100%;
+  }
+  .card-text-wrapper {
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 12%;
+  }
+
+  .flex-wrapper {
+    flex-direction: column;
+  }
+  .card-text {
+    box-shadow: 0px 0px 15px 14px rgba(173, 216, 230, 0.2);
+    padding: 18px;
+    /* width: 420px; */
+  }
+}
+@media (max-width: 512px) {
+  .card-text-wrapper {
+    padding: 0px 12%;
+  }
+}

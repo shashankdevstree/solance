@@ -1,0 +1,466 @@
+.form-check-input:checked {
+  background-color: rgb(26, 72, 168) !important;
+  outline: none !important;
+  border: none !important;
+}
+.form-check-input {
+  border: 1px solid rgb(26, 72, 168) !important;
+}
+.form-check-input:focus {
+  box-shadow: unset;
+}
+.form-check-inline {
+}
+.slick-prev,
+.slick-next {
+  background: #000;
+}
+
+.slick-arrow {
+  display: inline-block !important;
+}
+.slick-disabled {
+  display: none !important;
+}
+.group-btn {
+  display: flex;
+  justify-content: space-around;
+  max-width: 450px;
+  margin: 0px auto;
+}
+.products-menu:hover .sub-menu li:nth-child(4):hover .sub-menu {
+  top: 0 !important;
+}
+.products-menu:hover .sub-menu li:nth-child(5):hover .sub-menu {
+  top: 0 !important;
+}
+.products-menu:hover .sub-menu li:nth-child(6):hover .sub-menu {
+  top: 0 !important;
+}
+.products-menu:hover .sub-menu li:nth-child(7):hover .sub-menu {
+  top: 0 !important;
+}
+.new-survey {
+  display: none;
+}
+.group-btn:has(.next.slick-arrow.slick-disabled) .new-survey {
+  display: inline-block;
+}
+.btn-exact {
+  width: 150px;
+  padding: 10px 0px;
+  font-weight: 600;
+  border-radius: 25px;
+}
+.form-check .form-check-input[type="checkbox"] {
+  /* margin-left: -1em; */
+}
+.form-control:focus,
+.form-select:focus {
+  outline: 1px solid rgb(26, 72, 168) !important;
+}
+.form-control,
+.form-select {
+  width: 98%;
+  margin: 0px auto;
+}
+.form-check-label {
+  margin-left: 2px;
+}
+.form-check-inline {
+  margin-right: 1rem;
+}
+.form-checkbox-label {
+  /* margin-left: 5px; */
+}
+.form-check-label,
+.form-checkbox-label {
+  cursor: pointer;
+}
+.slick-dots {
+  display: none !important;
+}
+.item.slick-slide:nth-child(1) {
+  min-height: unset !important;
+  height: auto !important;
+}
+.form-error .slick-list {
+  height: 510px !important;
+}
+.group-btn {
+  position: relative;
+  z-index: 1;
+}
+
+/* */
+
+.radio-btn-group {
+  --background: #ffffff;
+  --text: #414856;
+  --radio: #7c96b2;
+  --radio-checked: rgb(26, 72, 168);
+  --radio-size: 16px;
+  --width: 150px;
+  --height: 140px;
+  --border-radius: 10px;
+  background: var(--background);
+  /* width: var(--width); */
+  /* height: var(--height); */
+  border-radius: var(--border-radius);
+  color: var(--text);
+  position: relative;
+  /* box-shadow: 0 10px 30px rgba(65, 72, 86, 0.05); */
+  /* padding: 30px 20px; */
+  /* display: grid; */
+  /* grid-template-columns: auto var(--radio-size); */
+}
+#loading {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  line-height: 100vh;
+}
+#loading .spinner {
+  position: relative;
+}
+/* .loading{
+  position: relative;
+} */
+#loading .spinner-border {
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+}
+
+.radio-btn-group label {
+  cursor: pointer;
+}
+.radio-btn-group .form-check-label {
+  font-size: 17.5px;
+}
+
+.radio-btn-group input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+  height: var(--radio-size);
+  width: var(--radio-size);
+  outline: none;
+  margin: 0;
+  margin-right: 0.3125rem;
+  cursor: pointer;
+  border: 2px solid var(--radio);
+  background: transparent;
+  border-radius: 50%;
+  display: grid;
+  justify-self: end;
+  justify-items: center;
+  align-items: center;
+  overflow: hidden;
+  transition: border 0.5s ease;
+}
+
+.radio-btn-group input[type="radio"]::before,
+.radio-btn-group input[type="radio"]::after {
+  content: "";
+  display: flex;
+  justify-self: center;
+  border-radius: 50%;
+}
+
+.radio-btn-group input[type="radio"]::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--background);
+  z-index: 1;
+  opacity: var(--opacity, 1);
+}
+
+.radio-btn-group input[type="radio"]::after {
+  position: relative;
+  width: calc(100% / 2);
+  height: calc(100% / 2);
+  background: var(--radio-checked);
+  top: var(--y, 100%);
+  transition: top 0.5s cubic-bezier(0.48, 1.97, 0.5, 0.63);
+}
+
+.radio-btn-group input[type="radio"]:checked {
+  --radio: var(--radio-checked);
+}
+
+.radio-btn-group input[type="radio"]:checked::after {
+  --y: 0%;
+  animation: stretch-animate 0.3s ease-out 0.17s;
+  z-index: 1;
+}
+
+.radio-btn-group input[type="radio"]:checked::before {
+  /* --opacity: 0; */
+}
+
+.radio-btn-group input[type="radio"]:checked ~ input[type="radio"]::after {
+  --y: -100%;
+}
+
+.radio-btn-group input[type="radio"]:not(:checked)::before {
+  --opacity: 1;
+  transition: opacity 0s linear 0.5s;
+}
+
+@keyframes stretch-animate {
+  0% {
+    transform: scale(1, 1);
+  }
+
+  28% {
+    transform: scale(1.15, 0.85);
+  }
+
+  50% {
+    transform: scale(0.9, 1.1);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+/* */
+
+*:not(:empty) {
+  transform-style: preserve-3d;
+}
+
+.flipBox {
+  position: relative;
+  display: block;
+  text-align: left;
+  margin: 1em auto;
+  cursor: pointer;
+  padding-left: 0px;
+}
+.flipBox:active > .flipBox_boxOuter {
+  height: 25%;
+}
+.flipBox label {
+  padding-left: 1.25em;
+}
+.flipBox > input {
+  appearance: none;
+  position: fixed;
+  left: -100vmax;
+  margin-top: 0px;
+  /* top: -100vmax; */
+}
+.flipBox > input:checked ~ .flipBox_boxOuter {
+  animation: flipBox1 1s forwards linear;
+}
+.flipBox > input:checked ~ .flipBox_boxOuter .flipBox_box {
+  animation: flipBox2 1s forwards ease-in-out;
+}
+.flipBox > input:checked ~ .flipBox_shadow {
+  animation: flipBox3 1s forwards ease-in-out;
+}
+.flipBox > input:not(:checked) ~ .flipBox_boxOuter {
+  animation: flipBox4 1s forwards linear;
+}
+.flipBox > input:not(:checked) ~ .flipBox_boxOuter .flipBox_box {
+  animation: flipBox5 1s forwards ease-in-out;
+}
+.flipBox > input:not(:checked) ~ .flipBox_shadow {
+  animation: flipBox6 1s forwards ease-in-out;
+}
+.flipBox > input:disabled ~ * {
+  cursor: not-allowed;
+}
+.flipBox > input:disabled ~ .flipBox_boxOuter {
+  height: 0%;
+}
+.flipBox > input:disabled ~ .flipBox_boxOuter .flipBox_box > div:nth-child(6) {
+  background-color: #ccc;
+}
+.flipBox
+  > input:disabled
+  ~ .flipBox_boxOuter
+  .flipBox_box
+  > div:nth-child(-n + 5),
+.flipBox > input:disabled ~ .flipBox_boxOuter ~ .flipBox_shadow {
+  display: none;
+}
+.flipBox > input:focus-visible ~ label {
+  outline: 1px #000 solid;
+  outline-offset: 0.25em;
+}
+.flipBox_boxOuter {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 1em;
+  height: 1em;
+  transform-origin: top;
+  transition: height 0.25s;
+}
+.flipBox_box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 1em;
+  height: 100%;
+  transform: translate(-50%, -50%);
+}
+.flipBox_box > div {
+  position: absolute;
+  width: 1em;
+  box-shadow: 0 0 0.25em #000 7 inset;
+}
+.flipBox_box > div:nth-child(1) {
+  background-image: linear-gradient(#1E335E, white);
+  transform: rotateY(0deg) translateX(50%) rotateY(90deg);
+  height: 100%;
+}
+.flipBox_box > div:nth-child(2) {
+  background-image: linear-gradient(#1E335E, white);
+  transform: rotateY(90deg) translateX(50%) rotateY(90deg);
+  height: 100%;
+}
+.flipBox_box > div:nth-child(3) {
+  background-image: linear-gradient(#1E335E, white);
+  transform: rotateY(180deg) translateX(50%) rotateY(90deg);
+  height: 100%;
+}
+.flipBox_box > div:nth-child(4) {
+  background-image: linear-gradient(#1E335E, white);
+  transform: rotateY(270deg) translateX(50%) rotateY(90deg);
+  height: 100%;
+}
+.flipBox_box > div:nth-child(5) {
+  background-color: #1E335E;
+  transform: rotateX(90deg) translateY(-0.5em);
+  transform-origin: top;
+  height: 1em;
+}
+.flipBox_box > div:nth-child(5)::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  clip-path: polygon(
+    12.5% 56.25%,
+    25% 43.75%,
+    37.5% 56.25%,
+    75% 18.75%,
+    87.5% 31.25%,
+    37.5% 81.25%,
+    12.5% 56.25%
+  );
+}
+.flipBox_box > div:nth-child(6) {
+  bottom: 0;
+  background-color: white;
+  transform: rotateX(90deg) translateY(0.5em);
+  transform-origin: bottom;
+  height: 1em;
+  border: 1px solid #1E335E;
+}
+.flipBox_shadow {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 1em;
+  height: 1em;
+  transform: translateY(-50%) translateZ(-1px);
+  background-color: #000 7;
+  filter: blur(0.2em);
+}
+@keyframes flipBox1 {
+  0%,
+  100% {
+    transform: rotateX(90deg);
+    animation-timing-function: ease-out;
+  }
+  50% {
+    transform: rotateX(90deg) translateY(2em);
+    animation-timing-function: ease-in;
+  }
+}
+@keyframes flipBox2 {
+  from {
+    transform: translate(-50%, -50%) rotateX(0deg) rotateY(180deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotateX(-180deg) rotateY(0deg);
+  }
+}
+@keyframes flipBox3 {
+  0%,
+  100% {
+    transform: translateY(-50%) translateZ(-1px) scale(1);
+    animation-timing-function: ease-out;
+  }
+  50% {
+    transform: translateY(-50%) translateZ(-1px) scale(1.5);
+    animation-timing-function: ease-in;
+  }
+}
+@keyframes flipBox4 {
+  0%,
+  100% {
+    transform: rotateX(90deg);
+    animation-timing-function: ease-out;
+  }
+  50% {
+    transform: rotateX(90deg) translateY(2em);
+    animation-timing-function: ease-in;
+  }
+}
+@keyframes flipBox5 {
+  from {
+    transform: translate(-50%, -50%) rotateX(-180deg) rotateY(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotateX(-360deg) rotateY(180deg);
+  }
+}
+@keyframes flipBox6 {
+  0%,
+  100% {
+    transform: translateY(-50%) translateZ(-1px) scale(1);
+    animation-timing-function: ease-out;
+  }
+  50% {
+    transform: translateY(-50%) translateZ(-1px) scale(1.5);
+    animation-timing-function: ease-in;
+  }
+}
+@media (prefers-reduced-motion) {
+  .flipBox_boxOuter,
+  .flipBox_box,
+  .flipBox_shadow {
+    animation-play-state: paused !important;
+  }
+  .flipBox_boxOuter {
+    transition: none;
+  }
+}
+
+/* .slick-dotted.slick-slider:nth-child(1) {
+    margin-bottom: -50px;
+}
+.survey-form.form-error .slick-dotted.slick-slider {
+    margin-bottom: 10px;
+} */
+/* .form-error .slick-initialized .slick-slide {
+    min-height: 350px;
+} */
